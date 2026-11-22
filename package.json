@@ -1,0 +1,44 @@
+{
+  "name": "projet-kamis",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "start": "npx tsx server/index.ts",
+    "build": "npm --prefix client install && npm --prefix client run build",
+    "test": "npx tsx server/tests/runAllTests.ts && npx tsx server/tests/e2eHttpTest.ts",
+    "server": "npx tsx server/index.ts",
+    "dev:server": "npx tsx watch server/index.ts",
+    "client": "npm --prefix client run dev",
+    "build:client": "npm --prefix client run build",
+    "build:server": "npx tsc"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "bcryptjs": "^3.0.3",
+    "better-sqlite3": "^13.2.0",
+    "cookie-parser": "^1.4.7",
+    "cors": "^2.8.6",
+    "dotenv": "^18.0.10",
+    "express": "^5.3.0",
+    "helmet": "^8.3.0",
+    "multer": "^2.5.0",
+    "nodemailer": "^10.6.1",
+    "uuid": "^14.0.3"
+  },
+  "devDependencies": {
+    "@types/bcryptjs": "^2.4.6",
+    "@types/better-sqlite3": "^9.6.0",
+    "@types/cookie-parser": "^1.4.10",
+    "@types/cors": "^2.8.19",
+    "@types/express": "^5.0.6",
+    "@types/multer": "^2.3.0",
+    "@types/node": "^26.6.6",
+    "@types/nodemailer": "^8.0.2",
+    "@types/uuid": "^10.0.0",
+    "tsx": "^4.23.15",
+    "typescript": "^7.0.2"
+  }
+}
